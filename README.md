@@ -6,4 +6,9 @@ Setup and Execution Instructions
 - This is using NodeJS Version 8.11.1 and NPM Version 5.6.0 and was operated on the Windows 10 OS.
 
 Report Output
-![Screenshot of Output](/assets/Report Output.png)
+Screenshot found in /assets/Report Output.PNG
+
+Coverage Report
+Screenshot found in /assets/Coverage Report.PNG
+
+My experience with unit testing & TDD is positive. Using unit testing software made me realize the importance of creating tests before writing code. Writing correct functions then becomes very similar to Leet Code where I write some code and is checked for correctness online. I think that TDD and unit testing should be incorporated into any SCRUM/Agile project and is useful in any Agile development project. The benefits of test driven development are the check for correctness in implementation and outputs. The drawbacks to this are that there isn't a way to check if the tests themselves are written correctly and so a lot of care will need to be taken when writing the tests.
