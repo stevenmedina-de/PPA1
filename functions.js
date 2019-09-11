@@ -31,8 +31,7 @@ function retirement(age, salary, percentSaved, savingsGoal) {
     }
     if (age >= 100) {
         return 'Goal not met.'
-    }
-    if (goal > savingsGoal) {
+    } else if (goal > savingsGoal) {
         return age;
     }
 }
