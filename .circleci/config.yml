@@ -1,0 +1,11 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/PPA2
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - run: sudo npm install -g npm@latest
+      - run: npm install
+      - run: npm run coverage
