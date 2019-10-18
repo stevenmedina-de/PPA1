@@ -5,7 +5,7 @@ const splitTip = require('./functions').splitTip;
 
 describe('BMI function should take height and weight and returns the body mass index', () => {
     it('should provide correct body mass index for input of weight and pounds', () => {
-        expect(bmi(5, 3, 125)[1]).toBe(22.0);
+        expect(bmi(5, 3, 125)[1]).toBe(22.7);
     });
     it('should display the correct weight category for an associated BMI', () => {
         expect(bmi(5, 3, 125)[0]).toMatch('Normal weight');
