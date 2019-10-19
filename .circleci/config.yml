@@ -10,12 +10,11 @@ jobs:
           MONGO_INITDB_ROOT_USERNAME: "root_user"
           MONGO_INITDB_ROOT_PASSWORD: "root_password"
           MONGO_INITDB_DATABASE: "ppa2_db"
-          MONGODB_USERNAME: "user1"
-          MONGODB_PASSWORD: "password1"
     steps:
       - run: dockerize -wait tcp://localhost:27017 -timeout 120s
       - checkout
       - run: sudo npm install -g npm@latest
       - run: npm install
       - run: npm run coverage
+      - run: mongo
       - run: node connect.js
