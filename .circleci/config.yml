@@ -5,7 +5,12 @@ jobs:
     docker:
       - image: circleci/node:latest
       - image: circleci/mongo:latest
+        port: 27017:27017
+        environment:
+          MONGODB_USERNAME: "test_user"
+          MONGODB_PASSWORD: "test_password"
     steps:
+      - run: dockerize -wait tcp://localhost:27017 -timeout 1m
       - checkout
       - run: sudo npm install -g npm@latest
       - run: npm install
