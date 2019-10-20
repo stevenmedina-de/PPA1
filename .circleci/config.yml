@@ -4,17 +4,9 @@ jobs:
     working_directory: ~/PPA2
     docker:
       - image: circleci/node:latest
-      - image: circleci/mongo:latest
-        port: 27017:27017
-        environment:
-          MONGO_INITDB_ROOT_USERNAME: "root_user"
-          MONGO_INITDB_ROOT_PASSWORD: "root_password"
-          MONGO_INITDB_DATABASE: "ppa2_db"
     steps:
-      - run: dockerize -wait tcp://localhost:27017 -timeout 120s
       - checkout
       - run: sudo npm install -g npm@latest
       - run: npm install
       - run: npm run coverage
-      - run: mongo
       - run: node connect.js
