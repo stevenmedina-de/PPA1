@@ -9,4 +9,4 @@ jobs:
       - run: sudo npm install -g npm@latest
       - run: npm install
       - run: npm run coverage
-      - run: npm run testDB
+      - run: npm run dbTest
