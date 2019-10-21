@@ -4,9 +4,10 @@
   "description": "CIS4930 PPA #1",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest functions.test.js",
+    "dbTest": "jest checkDB.test.js",
     "start": "node index.js",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage functions.test.js"
   },
   "author": "Steven Medina",
   "license": "ISC",

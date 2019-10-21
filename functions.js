@@ -1,6 +1,6 @@
 function bmi(feetHeight, inchHeight, weight) {
     let weightInKg = weight * 0.45;
-    let height = (feetHeight * 12) + inchHeight;
+    let height = parseInt(feetHeight * 12) + parseInt(inchHeight)
     let heightInM = height * 0.025;
     heightInM = heightInM * heightInM;
     let bodyMassIndex = weightInKg / heightInM;
